@@ -133,7 +133,6 @@ class VKService {
                         if let result = result as? [String: Any] {
                         handler(.success(result))
                         } else {
-                            // handler(.failure[VKAPIError.error("Data error")
                         }
                         case .failure(let error):
                         handler(.failure(error))
