@@ -31,6 +31,10 @@
 		858B7A3A26179B9B00557E63 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B7A3926179B9B00557E63 /* NewsTableViewCell.swift */; };
 		858B7A3D26179BF400557E63 /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858B7A3C26179BF400557E63 /* NewsTableViewController.swift */; };
 		85D7405826358FA7009E993C /* WKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7405726358FA7009E993C /* WKWebViewController.swift */; };
+		85D740622640314D009E993C /* VKService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D740612640314D009E993C /* VKService.swift */; };
+		85D7406626403BF9009E993C /* VKPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7406526403BF9009E993C /* VKPhoto.swift */; };
+		85D7406926403F96009E993C /* VKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7406826403F96009E993C /* VKUser.swift */; };
+		85D7406C26404211009E993C /* VKGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7406B26404211009E993C /* VKGroup.swift */; };
 		D53C74E5F196EEC61522BE0B /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE2E971AF145628F5CCF8B2 /* Pods_Weather.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,10 @@
 		858B7A3926179B9B00557E63 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		858B7A3C26179BF400557E63 /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		85D7405726358FA7009E993C /* WKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKWebViewController.swift; sourceTree = "<group>"; };
+		85D740612640314D009E993C /* VKService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKService.swift; sourceTree = "<group>"; };
+		85D7406526403BF9009E993C /* VKPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPhoto.swift; sourceTree = "<group>"; };
+		85D7406826403F96009E993C /* VKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKUser.swift; sourceTree = "<group>"; };
+		85D7406B26404211009E993C /* VKGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKGroup.swift; sourceTree = "<group>"; };
 		9BE2E971AF145628F5CCF8B2 /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2DC8FC2E709E08673BBC132 /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +120,7 @@
 				8581969725F813080081585B /* Model */,
 				8581968625F650130081585B /* GroupTableViewCell.swift */,
 				858196C4260F4E880081585B /* FriendTableViewCell.swift */,
+				85D7406026403123009E993C /* Decodable */,
 				858196C5260F4E880081585B /* FriendTableViewCell.xib */,
 				8581966725F01F0A0081585B /* SceneDelegate.swift */,
 				8581966925F01F0A0081585B /* ViewController.swift */,
@@ -143,6 +152,17 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		85D7406026403123009E993C /* Decodable */ = {
+			isa = PBXGroup;
+			children = (
+				85D740612640314D009E993C /* VKService.swift */,
+				85D7406526403BF9009E993C /* VKPhoto.swift */,
+				85D7406826403F96009E993C /* VKUser.swift */,
+				85D7406B26404211009E993C /* VKGroup.swift */,
+			);
+			path = Decodable;
 			sourceTree = "<group>";
 		};
 		9D3D98F6D58EB2763930C537 /* Frameworks */ = {
@@ -271,12 +291,16 @@
 			files = (
 				8581968725F650130081585B /* GroupTableViewCell.swift in Sources */,
 				8581969D25F81AE80081585B /* PhotoCollectionViewCell.swift in Sources */,
+				85D7406626403BF9009E993C /* VKPhoto.swift in Sources */,
 				858B7A3A26179B9B00557E63 /* NewsTableViewCell.swift in Sources */,
 				858B7A3D26179BF400557E63 /* NewsTableViewController.swift in Sources */,
+				85D740622640314D009E993C /* VKService.swift in Sources */,
 				858196A025FE47ED0081585B /* GradientView.swift in Sources */,
 				8581968A25F655630081585B /* AllGroupsTableViewController.swift in Sources */,
 				858196AC260775730081585B /* FriendsTableViewHeader.swift in Sources */,
+				85D7406926403F96009E993C /* VKUser.swift in Sources */,
 				858196A6260151870081585B /* ViewWithShadow.swift in Sources */,
+				85D7406C26404211009E993C /* VKGroup.swift in Sources */,
 				85D7405826358FA7009E993C /* WKWebViewController.swift in Sources */,
 				851A463E262C6EFC006E790C /* Session.swift in Sources */,
 				8581967B25F50C680081585B /* FriendsTableViewController.swift in Sources */,
