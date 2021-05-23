@@ -16,7 +16,7 @@ class GroupsTableViewController: UITableViewController {
         
         AF.request("https://api.vk.com/method/groups.get",
                    parameters: [
-                    "access_token" : Session.shared.token,
+                    "access_token" : Session.shared.accessToken,
                     "user_id" : Session.shared.userId,
                     "extended" : "1",
                     "fields" : "city, description, members_counts",

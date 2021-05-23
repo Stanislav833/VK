@@ -200,9 +200,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="0Dd-RT-53o">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="44" id="zaq-UT-iDC" customClass="FriendTableViewCell" customModule="Weather" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zaq-UT-iDC" id="2kV-xz-0eh">
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="44"/>
@@ -271,6 +276,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Friends" id="Eoa-1Z-dVm"/>
                     <connections>
+                        <outlet property="SearchBar" destination="0Dd-RT-53o" id="oUS-SA-J3s"/>
                         <segue destination="q33-pw-0fQ" kind="show" identifier="toPhoto" id="cou-Tg-7eA"/>
                     </connections>
                 </tableViewController>
@@ -462,16 +468,31 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="38.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6SF-gH-p9N" customClass="AvatarImageView" customModule="Weather" customModuleProvider="target">
+                                            <rect key="frame" x="357" y="0.0" width="44" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="44" id="rek-0y-8AM"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <integer key="value" value="22"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottomMargin" secondItem="Vl8-ko-CZK" secondAttribute="bottom" constant="4" id="BGC-56-VHn"/>
+                                        <constraint firstItem="6SF-gH-p9N" firstAttribute="top" secondItem="LWV-78-GbG" secondAttribute="top" id="DhA-c4-lgM"/>
                                         <constraint firstItem="Vl8-ko-CZK" firstAttribute="top" secondItem="LWV-78-GbG" secondAttribute="topMargin" constant="4" id="E2t-tO-ZU5"/>
                                         <constraint firstItem="Vl8-ko-CZK" firstAttribute="centerY" secondItem="LWV-78-GbG" secondAttribute="centerY" id="EAc-O3-vjg"/>
                                         <constraint firstItem="Vl8-ko-CZK" firstAttribute="leading" secondItem="LWV-78-GbG" secondAttribute="leadingMargin" constant="16" id="Kgk-UR-YYt"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Vl8-ko-CZK" secondAttribute="trailing" constant="16" id="Pf3-lx-gg4"/>
+                                        <constraint firstAttribute="bottom" secondItem="6SF-gH-p9N" secondAttribute="bottom" id="kCM-hc-hrx"/>
+                                        <constraint firstAttribute="trailing" secondItem="6SF-gH-p9N" secondAttribute="trailing" constant="13" id="mdX-7i-wYw"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="CommunityPhotosImageView" destination="6SF-gH-p9N" id="ywh-dH-kDa"/>
                                     <outlet property="titleLable" destination="Vl8-ko-CZK" id="3K0-A1-OeV"/>
                                 </connections>
                             </tableViewCell>
@@ -491,7 +512,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s10-cW-K9a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="Paf-b8-jRx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2048" y="-1025"/>
+            <point key="canvasLocation" x="2047.826086956522" y="-1025.2232142857142"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XWL-Wt-Vud">
@@ -833,14 +854,14 @@
                     </view>
                     <navigationItem key="navigationItem" id="enC-te-EN7"/>
                     <connections>
-                        <outlet property="carousel" destination="6oY-IA-Ygc" id="eoi-Pz-qkd"/>
-                        <outlet property="collectionView" destination="Lqf-bH-sis" id="o4T-FL-RMc"/>
-                        <outlet property="imagesBox" destination="Eeq-Dx-q9q" id="aAS-mT-V83"/>
+                        <outlet property="carousel" destination="6oY-IA-Ygc" id="nsI-ja-D4d"/>
+                        <outlet property="collectionView" destination="Lqf-bH-sis" id="heO-4b-gRx"/>
+                        <outlet property="imagesBox" destination="Eeq-Dx-q9q" id="8lR-Kb-blP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOO-zc-R1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2799" y="445"/>
+            <point key="canvasLocation" x="2919" y="437"/>
         </scene>
     </scenes>
     <resources>

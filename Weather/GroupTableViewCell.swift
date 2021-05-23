@@ -10,6 +10,7 @@ import UIKit
 class GroupTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var CommunityPhotosImageView: UIImageView!
 
     override func prepareForReuse() {
         super.prepareForReuse()

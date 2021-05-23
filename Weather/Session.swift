@@ -7,10 +7,10 @@
 
 import Foundation
 
-final class Session {
+ class Session {
     static let shared = Session()
     
-    var token = "1b1ffcd805a93e01d9df5eac661072bf9fe920f9556597a8dc679859dde32e043ca33c974c25f70764cfb"
+    var accessToken = "eb2cfcd252f6c782a08b8ba8ebc4e186a590b64d6c88a93b8f48454260487a8a465a48c6fa534f9f1a2e8"
     var userId = 5250488
     
     private init() {

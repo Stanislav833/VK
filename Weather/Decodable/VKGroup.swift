@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class GroupsResponse: Decodable {
     let response: Groups
@@ -15,18 +16,18 @@ class Groups: Decodable {
     let items: [VKGroup]
 }
 
-class VKGroup: Decodable {
+class VKGroup: Object, Decodable {
     
-    var id: Int = 0
-    var name: String = ""
-    var screenName: String = ""
-    var avatar: String = ""
-    var userCity = ""
-    var typeGroup = ""
+    @objc dynamic var id: Int = 0
+    @objc dynamic var name: String = ""
+    @objc dynamic var screenName: String = ""
+    @objc dynamic var avatar: String = ""
+    @objc dynamic var userCity = ""
+    @objc dynamic var typeGroup = ""
     
-    enum CodingKeys: String, CodingKeys {
+    enum CodingKeys: String, CodingKey {
         case name = "name"
-        case screenName = "Screen_name"
+        case screenName = "screen_name"
         case avatar = "photo_200"
         case id
         case countGroup
@@ -41,3 +42,4 @@ class VKGroup: Decodable {
         self.avatar = try values.decode(String.self, forKey: .avatar)
     }
 }
+
