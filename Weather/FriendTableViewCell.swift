@@ -16,5 +16,6 @@ class FriendTableViewCell: UITableViewCell {
         override func prepareForReuse() {
             super.prepareForReuse()
             titleLable.text = ""
+            icon.image = nil
         }
     }

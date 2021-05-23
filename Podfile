@@ -4,8 +4,9 @@
 target 'Weather' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-
-pod 'Alamofire', '~> 5.4'
+pod 'AlamofireImage', '~> 4.2'
+pod 'Realm', '10.8.0-beta.1'
+pod 'RealmSwift', '10.8.0-beta.1'
 
   # Pods for Weather
 

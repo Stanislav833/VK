@@ -132,10 +132,10 @@
 				858B7A3926179B9B00557E63 /* NewsTableViewCell.swift */,
 				8581966B25F01F0A0081585B /* Main.storyboard */,
 				851A463D262C6EFC006E790C /* Session.swift */,
+				858196A5260151870081585B /* ViewWithShadow.swift */,
 				85D7405726358FA7009E993C /* WKWebViewController.swift */,
 				858196A82602A76C0081585B /* LikeButton.swift */,
 				858196A226013FD00081585B /* RoundedImageView.swift */,
-				858196A5260151870081585B /* ViewWithShadow.swift */,
 				8581969F25FE47ED0081585B /* GradientView.swift */,
 				8581969925F8161A0081585B /* PhotoViewController.swift */,
 				8581969C25F81AE80081585B /* PhotoCollectionViewCell.swift */,
@@ -184,7 +184,7 @@
 				8581965E25F01F0A0081585B /* Sources */,
 				8581965F25F01F0A0081585B /* Frameworks */,
 				8581966025F01F0A0081585B /* Resources */,
-				257E2322BC92061617E81767 /* [CP] Embed Pods Frameworks */,
+				40C2E717B6428870937BF075 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -265,7 +265,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		257E2322BC92061617E81767 /* [CP] Embed Pods Frameworks */ = {
+		40C2E717B6428870937BF075 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
