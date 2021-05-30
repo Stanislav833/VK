@@ -8,6 +8,7 @@
 import UIKit
 import Alamofire
 import AlamofireImage
+import RealmSwift
 
 class AllGroupsTableViewController: UITableViewController {
     
@@ -77,8 +78,10 @@ class AllGroupsTableViewController: UITableViewController {
 }
 
 */
-
-     private var groups = [VKGroup]()
+    
+    var notificationGroups: NotificationToken?
+    
+    private var groups = [VKGroup]()
     private var filterGroups = [VKGroup]() {
         didSet {
             tableView.reloadData()
@@ -93,14 +96,35 @@ class AllGroupsTableViewController: UITableViewController {
         requestData()
         navigationItem.rightBarButtonItem = nil
         tableView.tableFooterView = UIView()
+        
+        notificationGroups = DataBaseService.instance.groups?.observe() { [unowned self] (changes) in
+            print("notificationGroup>", changes)
+            switch changes {
+            case .initial(let groups):
+                self.groups = groups.map { $0 }
+                tableView.reloadData()
+
+            case .update(let groups, _, _ , _):
+                self.groups = groups.map { $0 }
+                tableView.reloadData()
+                
+            case .error(_):
+                print("error ")
+            }
+            
+        }
+        
+        
+        requestData()
     }
+    
 
     private func requestData() {
         VKService.instance.loadGroups { result in
             switch result {
-            case .success(let groups):
-                self.groups = groups
-                self.tableView.reloadData()
+            case .success( _):
+                print("success")
+                
             case .failure(let error):
                 print(error)
             }

@@ -17,10 +17,10 @@ class VKUserResponse: Codable {
 }
 
 class VKUser: Object, Codable {
-    @objc var userId: Int = 0
-    @objc var firstName: String = ""
-    @objc var lastName: String = ""
-    @objc var avatarUrl: String = ""
+    @objc dynamic var userId: Int = 0
+    @objc dynamic var firstName: String = ""
+    @objc dynamic var lastName: String = ""
+    @objc dynamic var avatarUrl: String = ""
     
 }
 

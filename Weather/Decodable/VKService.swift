@@ -24,31 +24,15 @@ class VKService {
     private init() {}
     
     //сохранение  данных в Realm
-         func saveUserData(_ user: [VKUser]) {
-    // обработка исключений при работе с хранилищем
-            do {
-    // получаем доступ к хранилищу
-                let realm = try Realm()
-                
-    // начинаем изменять хранилище
-                realm.beginWrite()
-                
-    // кладем все объекты класса группы в хранилище
-                realm.add(user)
-                
-    // завершаем изменения хранилища
-                try realm.commitWrite()
-            } catch {
-    // если произошла ошибка, выводим ее в консоль
-                print(error)
-            }
-        }
+    func saveUserData(_ users: [VKUser]) {
+         DataBaseService.instance.saveFriends(list: users)
+    }
     
     func loadFriends(handler: @escaping (Result<[VKUser], Error>) -> Void) {
         let apiMethod = "friends.get"
         let apiEnpoint = baseUrl + apiMethod
         let requestParameters = [
-        "access_token" : accessToken,
+            "access_token" : accessToken,
             "v" : apiVersion,
             "fields" : "photo_200_orig, online"
         ]
@@ -132,24 +116,8 @@ class VKService {
     }
 
     //сохранение  данных в Realm
-         func saveGroupData(_ group: [VKGroup]) {
-    // обработка исключений при работе с хранилищем
-            do {
-    // получаем доступ к хранилищу
-                let realm = try Realm()
-                
-    // начинаем изменять хранилище
-                realm.beginWrite()
-                
-    // кладем все объекты класса группы в хранилище
-                realm.add(group)
-                
-    // завершаем изменения хранилища
-                try realm.commitWrite()
-            } catch {
-    // если произошла ошибка, выводим ее в консоль
-                print(error)
-            }
+         func saveGroupData(_ groups: [VKGroup]) {
+            DataBaseService.instance.saveGroups(list: groups)
         }
     
     func loadGroups(handler: @escaping (Result<[VKGroup], Error>) -> Void) {
