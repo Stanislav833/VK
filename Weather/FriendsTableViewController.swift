@@ -7,6 +7,7 @@
 
 import UIKit
 import Alamofire
+import RealmSwift
 
 class FriendsTableViewController: UITableViewController {
     
@@ -60,7 +61,7 @@ class FriendsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as!
-        FriendTableViewCell 
+        FriendTableViewCell
         let sectionName = Array(dictionary.keys).sorted(by: <)[indexPath.section]
         let friend = dictionary[sectionName]?.sorted(by: <)[indexPath.row]
         let image = images[indexPath.row]
@@ -90,6 +91,7 @@ class FriendsTableViewController: UITableViewController {
     
 
     @IBOutlet weak var SearchBar: UISearchBar!
+    var notificationUsers: NotificationToken?
     
     var selectedFriend: String?
         private var filteredUsers = [VKUser]() {
@@ -104,40 +106,57 @@ class FriendsTableViewController: UITableViewController {
                 tableView.reloadData()
             }
         }
+    
+    private var users = [VKUser]()
+    
+    private var sectionTitles = [String]()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        private var users = [VKUser]()
-        private var sectionTitles = [String]()
+        tableView.tableFooterView = UIView()
         
-            override func viewDidLoad() {
-                super.viewDidLoad()
+        notificationUsers = DataBaseService.instance.users?.observe() { [unowned self] (changes) in
+            print("notificationUsers>", changes)
+            switch changes {
+            case .initial(let users):
+                self.users = users.map { $0 }
+                tableView.reloadData()
+
+            case .update(let users, _, _ , _):
+                self.users = users.map { $0 }
+                tableView.reloadData()
                 
-                requestData()
-                tableView.tableFooterView = UIView()
+            case .error(_):
+                print("error ")
             }
-
-       
-        
-            private func requestData() {
-                VKService.instance.loadFriends { result in
-                    switch result {
-                    
-                    case .success(let users):
-                        self.users = users
-                        self.tableView.reloadData()
-                    case .failure(let error):
-                        print(error)
-                    }
-                }
-            }
-        
-        override func numberOfSections(in tableView: UITableView) -> Int {
-            return users.isEmpty ? sectionTitles.count : 1
+            
         }
-
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            if users.isEmpty {
-                let sectionTitle = sectionTitles[section]
-                return userGroups[sectionTitle]?.count ?? 0
+        
+      requestData()
+    }
+    
+    private func requestData() {
+        VKService.instance.loadFriends { result in
+            switch result {
+            
+            case .success(let users):
+                print("success")
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return users.isEmpty ? sectionTitles.count : 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if users.isEmpty {
+            let sectionTitle = sectionTitles[section]
+            return userGroups[sectionTitle]?.count ?? 0
             } else {
                 return users.count
             }

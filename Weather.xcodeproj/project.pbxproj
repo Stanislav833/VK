@@ -35,6 +35,7 @@
 		85D7406626403BF9009E993C /* VKPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7406526403BF9009E993C /* VKPhoto.swift */; };
 		85D7406926403F96009E993C /* VKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7406826403F96009E993C /* VKUser.swift */; };
 		85D7406C26404211009E993C /* VKGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7406B26404211009E993C /* VKGroup.swift */; };
+		85D7417B2663DED4009E993C /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7417A2663DED4009E993C /* DataBaseService.swift */; };
 		D53C74E5F196EEC61522BE0B /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE2E971AF145628F5CCF8B2 /* Pods_Weather.framework */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		85D7406526403BF9009E993C /* VKPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKPhoto.swift; sourceTree = "<group>"; };
 		85D7406826403F96009E993C /* VKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKUser.swift; sourceTree = "<group>"; };
 		85D7406B26404211009E993C /* VKGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKGroup.swift; sourceTree = "<group>"; };
+		85D7417A2663DED4009E993C /* DataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseService.swift; sourceTree = "<group>"; };
 		9BE2E971AF145628F5CCF8B2 /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2DC8FC2E709E08673BBC132 /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 			children = (
 				85D740612640314D009E993C /* VKService.swift */,
 				85D7406526403BF9009E993C /* VKPhoto.swift */,
+				85D7417A2663DED4009E993C /* DataBaseService.swift */,
 				85D7406826403F96009E993C /* VKUser.swift */,
 				85D7406B26404211009E993C /* VKGroup.swift */,
 			);
@@ -303,6 +306,7 @@
 				85D7406C26404211009E993C /* VKGroup.swift in Sources */,
 				85D7405826358FA7009E993C /* WKWebViewController.swift in Sources */,
 				851A463E262C6EFC006E790C /* Session.swift in Sources */,
+				85D7417B2663DED4009E993C /* DataBaseService.swift in Sources */,
 				8581967B25F50C680081585B /* FriendsTableViewController.swift in Sources */,
 				858196A92602A76C0081585B /* LikeButton.swift in Sources */,
 				8581966A25F01F0A0081585B /* ViewController.swift in Sources */,
