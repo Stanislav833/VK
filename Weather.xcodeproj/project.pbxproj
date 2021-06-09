@@ -36,6 +36,11 @@
 		85D7406926403F96009E993C /* VKUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7406826403F96009E993C /* VKUser.swift */; };
 		85D7406C26404211009E993C /* VKGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7406B26404211009E993C /* VKGroup.swift */; };
 		85D7417B2663DED4009E993C /* DataBaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D7417A2663DED4009E993C /* DataBaseService.swift */; };
+		85D74196266CFB45009E993C /* News2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D74195266CFB45009E993C /* News2TableViewController.swift */; };
+		85D741A7266D0FF9009E993C /* TextNewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D741A6266D0FF9009E993C /* TextNewsTableViewCell.swift */; };
+		85D741B0266D117B009E993C /* AutherDateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D741AF266D117B009E993C /* AutherDateTableViewCell.swift */; };
+		85D741B3266D11F1009E993C /* NewsPhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D741B2266D11F1009E993C /* NewsPhotoTableViewCell.swift */; };
+		85D741B6266D1244009E993C /* NewsButtonsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D741B5266D1244009E993C /* NewsButtonsTableViewCell.swift */; };
 		D53C74E5F196EEC61522BE0B /* Pods_Weather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE2E971AF145628F5CCF8B2 /* Pods_Weather.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +77,11 @@
 		85D7406826403F96009E993C /* VKUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKUser.swift; sourceTree = "<group>"; };
 		85D7406B26404211009E993C /* VKGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKGroup.swift; sourceTree = "<group>"; };
 		85D7417A2663DED4009E993C /* DataBaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseService.swift; sourceTree = "<group>"; };
+		85D74195266CFB45009E993C /* News2TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News2TableViewController.swift; sourceTree = "<group>"; };
+		85D741A6266D0FF9009E993C /* TextNewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextNewsTableViewCell.swift; sourceTree = "<group>"; };
+		85D741AF266D117B009E993C /* AutherDateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutherDateTableViewCell.swift; sourceTree = "<group>"; };
+		85D741B2266D11F1009E993C /* NewsPhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPhotoTableViewCell.swift; sourceTree = "<group>"; };
+		85D741B5266D1244009E993C /* NewsButtonsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsButtonsTableViewCell.swift; sourceTree = "<group>"; };
 		9BE2E971AF145628F5CCF8B2 /* Pods_Weather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2DC8FC2E709E08673BBC132 /* Pods-Weather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weather.release.xcconfig"; path = "Target Support Files/Pods-Weather/Pods-Weather.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +137,7 @@
 				8581966725F01F0A0081585B /* SceneDelegate.swift */,
 				8581966925F01F0A0081585B /* ViewController.swift */,
 				8581967A25F50C680081585B /* FriendsTableViewController.swift */,
+				85D74194266CFB17009E993C /* News */,
 				858196AB260775730081585B /* FriendsTableViewHeader.swift */,
 				858196AE2607765B0081585B /* FriendsTableViewHeader.xib */,
 				8581968325F64E9B0081585B /* GroupsTableViewController.swift */,
@@ -166,6 +177,18 @@
 				85D7406B26404211009E993C /* VKGroup.swift */,
 			);
 			path = Decodable;
+			sourceTree = "<group>";
+		};
+		85D74194266CFB17009E993C /* News */ = {
+			isa = PBXGroup;
+			children = (
+				85D74195266CFB45009E993C /* News2TableViewController.swift */,
+				85D741A6266D0FF9009E993C /* TextNewsTableViewCell.swift */,
+				85D741AF266D117B009E993C /* AutherDateTableViewCell.swift */,
+				85D741B5266D1244009E993C /* NewsButtonsTableViewCell.swift */,
+				85D741B2266D11F1009E993C /* NewsPhotoTableViewCell.swift */,
+			);
+			path = News;
 			sourceTree = "<group>";
 		};
 		9D3D98F6D58EB2763930C537 /* Frameworks */ = {
@@ -299,6 +322,7 @@
 				858B7A3D26179BF400557E63 /* NewsTableViewController.swift in Sources */,
 				85D740622640314D009E993C /* VKService.swift in Sources */,
 				858196A025FE47ED0081585B /* GradientView.swift in Sources */,
+				85D74196266CFB45009E993C /* News2TableViewController.swift in Sources */,
 				8581968A25F655630081585B /* AllGroupsTableViewController.swift in Sources */,
 				858196AC260775730081585B /* FriendsTableViewHeader.swift in Sources */,
 				85D7406926403F96009E993C /* VKUser.swift in Sources */,
@@ -306,6 +330,10 @@
 				85D7406C26404211009E993C /* VKGroup.swift in Sources */,
 				85D7405826358FA7009E993C /* WKWebViewController.swift in Sources */,
 				851A463E262C6EFC006E790C /* Session.swift in Sources */,
+				85D741B0266D117B009E993C /* AutherDateTableViewCell.swift in Sources */,
+				85D741B6266D1244009E993C /* NewsButtonsTableViewCell.swift in Sources */,
+				85D741A7266D0FF9009E993C /* TextNewsTableViewCell.swift in Sources */,
+				85D741B3266D11F1009E993C /* NewsPhotoTableViewCell.swift in Sources */,
 				85D7417B2663DED4009E993C /* DataBaseService.swift in Sources */,
 				8581967B25F50C680081585B /* FriendsTableViewController.swift in Sources */,
 				858196A92602A76C0081585B /* LikeButton.swift in Sources */,

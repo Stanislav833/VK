@@ -55,9 +55,10 @@ import UIKit
     
     private func updateLabelText() {
         let additionalLikes = isSelected ? 1 : 0
+        UIView.transition(with: countLabel, duration: 0.5, options: [.transitionCrossDissolve]) { [self] in
         countLabel.text = "\(likesCount + additionalLikes)"
     }
-    
+    }
     private func updateSelectionState() {
         let color = isSelected ? tintColor: .black
         countLabel.textColor = color
@@ -69,13 +70,13 @@ import UIKit
         isSelected = !isSelected
         updateSelectionState()
         sendActions(for: .valueChanged)
-        textCommentChange()
+        updateLabelText()
     }
     
-    func textCommentChange() {
+   /* func textCommentChange() {
         UIView.transition(with: countLabel, duration: 0.5, options: [.transitionCrossDissolve]) {
-            self.countLabel.text = "HEY"
-        }
+            self.countLabel.text = "Hey"
+        } */
   
 }
-}
+
